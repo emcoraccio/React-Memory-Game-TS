@@ -1,0 +1,9 @@
+div.card-col {
+  height: 175px;
+  margin-bottom: 15px;
+}
+
+div.card img {
+  cursor: pointer;
+  border: 2px solid #ffffff;
+}
