@@ -1,44 +1,31 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# React Memory Game 
 
-## Available Scripts
+## Purpose
+This is a simple game which presents the player with 12 different cards with pictures of animals on them. 
+The player needs to click on a picture which they haven't clicked yet, and every time a picture is clicked they are all shuffled.
+Their score goes up by one every time they click on a picture which hasn't been clicked before. Both their current score as well as their top score are displayed.<br/> 
+If they click all 12 correctly, they win and a new game is started.<br/> 
+If they click one they have already clicked before, the game is over and then restarts.
 
-In the project directory, you can run:
+## Tech
 
-### `npm start`
+* ReactJs
+* TypeScript
+<br/>
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+It is comprised of four components in addition to the main App component:
+- Card Container
+- Header
+- Message
+- Score
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Only four things are stored in state throughout the site: 
+- Score -> stores the current score of the user
+- Top Score -> stores the top score of the user
+- Feedback -> dynamically changes the message given to the user depending on if their answer was correct, they won/lost the game, or need instructions
+- Clicked -> stores ids of the images that have already been clicked in that game
 
-### `npm test`
+The images are shuffled through a shuffle function which shuffles the array of animal pictures and then they are dynamically rendered to the page using the map function. The data for the images is stored in a json file.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Other Info
+This site is a recreation of an assignment I did, redone using typescript. It is my first application built using react with typescript. Take a look at the original version here: https://github.com/emcoraccio/Memory-React-Game
